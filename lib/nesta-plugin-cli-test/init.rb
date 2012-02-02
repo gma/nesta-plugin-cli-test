@@ -7,6 +7,19 @@ module Nesta
     end
   end
 
+  module Commands
+    class Hello
+      include Nesta::Commands::Command
+
+      def initialize(*args)
+      end
+
+      def execute
+        puts "hello"
+      end
+    end
+  end
+
   class App
     helpers Nesta::Plugin::Cli::Test::Helpers
   end
